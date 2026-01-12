@@ -38,11 +38,14 @@ function App() {
     }
 
     const resetTimer=()=>{
+        clearInterval(Number(isRuning));
+        setIsRuning(null)
        setTime({hr:0,min:0,sec:0,millisec:0})
     }
 
     const stopTimer=()=>{
         clearInterval(Number(isRuning));
+        setIsRuning(null)
     }
 
 
